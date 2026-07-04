@@ -93,10 +93,3 @@ with st.form("survey_form", clear_on_submit=True):
 st.info("※ 참고: 제출 후에는 수정이 불가능하니 신중하게 입력해 주세요.")
 
 ### ✅ 다음 할 일 (매우 중요!)
-코드에 `id`를 직접 넣는 로직을 추가했기 때문에, 아까 보셨던 **RLS 에러**가 나지 않으려면 Supabase에서 정책(Policy) 설정을 완료해야 합니다.
-
-1.  **Supabase Table Editor**로 가서 `student_survey` 테이블을 엽니다.
-2.  상단의 **`RLS`** 또는 **`Policies`** 버튼을 누릅니다.
-3.  **`New Policy`** -> **`INSERT`** 선택 -> Target Roles를 **`anon`**으로 설정 -> 저장.
-
-이렇게 하면 이제 에러 없이 데이터가 아주 잘 저장될 거예요! 코드를 붙여넣고 테스트해 보신 뒤 결과를 알려주세요.
